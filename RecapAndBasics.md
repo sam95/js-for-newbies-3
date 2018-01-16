@@ -11,14 +11,16 @@ Let's just run through important concepts of the previous session before we get 
 ## Data types in Javascript
 Javascript is a *dynamically typed language*. That means variables can hold any value irrespective of the type of the value. 
 
-    let a = 5;
-    console.log(typeof a); // number
-    a = "This is an example";
-    console.log(typeof a); // string
-    
-    /* This 
-        is 
-       cool */
+```javascript
+let a = 5;
+console.log(typeof a); // number
+a = "This is an example";
+console.log(typeof a); // string
+
+/* This 
+    is 
+   cool */
+   ```
 
 There are mainly **5** data types of values that can be present in variables.
 - `number` (A numeric value like `5` or `5.5`)
@@ -32,41 +34,51 @@ Let us go through each of the data types in a bit more detail.
 ### number 
 A value of type **number** is a numeric value. Let's look at an example.
 
-    let a = 5;
+```javascript
+let a = 5;
+```
 ### boolean
 A value of type **boolean** stores either a `true` or `false`. There two are a result of conditions in code. 
 
 This helps in deciding which part of the code we want to execute, or how many times we need to execute the same code.
 
-    let a = (5 == 8);
-    if(a){
-        console.log("5 is equal to 8");
-    }
-    else{
-        console.log("5 is not equal to 8");
-    } 
+```javascript
+let a = (5 == 8);
+if(a){
+    console.log("5 is equal to 8");
+}
+else{
+    console.log("5 is not equal to 8");
+} 
+```
 ### string 
 A value of type **string** is either a character or an string of characters. 
 
-    let myName = "What's my name?";
-    let myInital = "S";
+```javascript
+let myName = "What's my name?";
+let myInital = "S";
+```
 ### undefined
 
 A value of type **undefined** is literally undefined. 😆
 
-    let middleName;
-    console.log(middleName);
-    /* Output is undefined because I don't have a middle name */
+```javascript
+let middleName;
+console.log(middleName);
+/* Output is undefined because I don't have a middle name */
+```
 ### objects
 A value of type **object** is in simple, a **key - value** pair. 
 
-    let crickter = {
-        // key : value
-        name: 'Anil Kumble',
-        age: 40,
-        isBatsman: false,
-        isBowler: true,
-    };
+```javascript
+let crickter = {
+    // key : value
+    name: 'Anil Kumble',
+    age: 40,
+    isBatsman: false,
+    isBowler: true,
+};
+```
 Okay, Let's hold it. The subject **object** data type is an ocean. We've not even touched a wave. Let's try to answer some questions below.
 - Can the key be a String? 😎
 - Can I have an array of objects? 😦
@@ -76,17 +88,21 @@ Okay, Let's hold it. The subject **object** data type is an ocean. We've not eve
 ## Arrays
 An array in simple, is a collection of values.  
 
-    let heroes = ['batman', 'superman', 'flash', 'arrow'];
+```javascript
+let heroes = ['batman', 'superman', 'flash', 'arrow'];
+```
 > The values in an array can belong to any data type 😌 
 
 ### Iterating an Array
 This means, accessing an element in the array through a sequence. Let's use a simple `for` loop to do this.
 
-    let heroes = ['batman', 'superman', 'flash', 'arrow', 'robin'];
+```javascript
+let heroes = ['batman', 'superman', 'flash', 'arrow', 'robin'];
 
-    for(let i = 0; i < heroes.length; i++) {
-        console.log(heroes[i]);
-    }
+for(let i = 0; i < heroes.length; i++) {
+    console.log(heroes[i]);
+}
+```
 ### Methods for Arrays
 Javascript makes it even simple to **CRUD** elements in an array.
 
@@ -95,12 +111,16 @@ Wait a minute. What's **CRUD**? 🤔😖
      
   The `push()` method lets you insert a value to the end of the array.
       
-      heroes.push("hulk");
+    ```javascript
+    heroes.push("hulk");
+    ```
 - **R**etrieve
   
    You can directly get the value stored in an index.
        
-       console.log(heroes[2]); // ⚡⚡
+     ```javascript
+     console.log(heroes[2]); // ⚡⚡
+     ```
     Quick question💡: 
     
     Suppose I now, know the value present in an array. How do I find it's index? 🤤 🤓
@@ -108,12 +128,16 @@ Wait a minute. What's **CRUD**? 🤔😖
    
    Now I feel, I need to change a hero from the list. Let's be straight, **arrow** doesn't belong there.
        
-       heroes[3] = "ant man";
+     ```javascript
+     heroes[3] = "ant man";
+  ```
 - **D**elete
 
     Wait, I want to remove **robin** out of the list. `pop()` comes to rescue.
     
-        heroes.pop();
+   ```javascript
+   heroes.pop();
+   ```
 Wait, there's more. `push()` and `pop()` work only with the end of the array.
 
 I want methods that do the same work with beginning of the array. 😤
@@ -122,18 +146,24 @@ I want methods that do the same work with beginning of the array. 😤
 
 `unshift()` and `shift()` do the same thing as `push()` and `pop()` respectively. Just that they work with the beginning of the array.
 
-    heroes.unshift("iron man");
-    // Output : ['iron man', 'batman', 'superman', 'flash', 'ant man']
+```javascript
+heroes.unshift("iron man");
+// Output : ['iron man', 'batman', 'superman', 'flash', 'ant man']
+```
  **iron man** disclosed his identity and **War Machine** is an exact copy of **iron man** plus I don't like him. So I would like to remove him, but the `pop()` method, if used removes **ant-man**. `shift()` comes to the rescue.
  
-     heroes.shift();
-     // Output : ['batman', 'superman', 'flash', 'ant man']
+```javascript
+heroes.shift();
+// Output : ['batman', 'superman', 'flash', 'ant man']
+```
 ## Functions
 A **function** means a block of code, called by a name. A function can be created by using the **function** keyword.
 
-    function someFunctionName() {
-        // some code
-    }
+```javascript
+function someFunctionName() {
+    // some code
+}
+```
  There are essentially **3** parts of a function :  
 - function name: The function name help us reference this function across our program.
 - function parameters: These let us provide some data to the function. 
@@ -141,13 +171,15 @@ A **function** means a block of code, called by a name. A function can be create
 
 Let's look at an example function 
 
-    function add(x, y) {
-        return x + y;
-    }
+```javascript
+function add(x, y) {
+    return x + y;
+}
 
-    // Invoke function to find the sum
-    console.log(add(9, 7));
-    /* Prints 16 */
+// Invoke function to find the sum
+console.log(add(9, 7));
+/* Prints 16 */
+```
 
 Let's get to the interesting part of the discussion 🙄.
 
@@ -157,14 +189,16 @@ If your answer is **global variables**. You're right ✌👏.
 
 Let's take a look at it.
 
-    var a = 10;
-    function addWithA(x, y) {
-        return x + y + a;
-    }
+   ```javascript
+   var a = 10;
+   function addWithA(x, y) {
+       return x + y + a;
+   }
 
-    // Invoke function to find the sum
-    console.log(addWithA(9, 7));
-    /* Prints 26 */
+   // Invoke function to find the sum
+   console.log(addWithA(9, 7));
+   /* Prints 26 */
+   ```
 
 Since you answered the quick question, let's have some more quick questions 😝.
 
@@ -174,14 +208,15 @@ Since you answered the quick question, let's have some more quick questions 😝
 - What if there is a variable conflict between global and local?
     
    Let's look at an example which depicts the above question.
-       
-       let a = 10;
-      function addWithA(x, y) {
-          let a = 5;
-          return x + y + a;
-      }
-      console.log(addWithA(9, 7));
-      /* What's the answer? 🤤 */
+     ```javascript 
+      let a = 10;
+     function addWithA(x, y) {
+         let a = 5;
+         return x + y + a;
+     }
+     console.log(addWithA(9, 7));
+     /* What's the answer? 🤤 */
+     ```
     
 - How to make a global variable not accessible by some functions? 
 
