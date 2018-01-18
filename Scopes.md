@@ -2,7 +2,7 @@
 What is a scope?
 
 Scope simply means visibility. Let's take a closer look at the image below. 
-
+![Floors](https://lh3.googleusercontent.com/DGTv5Nxex7EQWaT59Mr7EbYyZl_RO2M1woT7Y8P-fUGi85CksKOVVJbqkpwkO-SvgFQ_9xSOeotHBcgbDDHk2vLgzdrGhqeAPi3CuSkZCGb5APLP1zWtfiwjYOF0s8Ws9_RGtZLPcZ8-S-J5CW_mzmpIRrYVfngH-XWC9uWhXAMlNOgWo9kD16QvnbHijTOzYXC23Mj_AynlmXiJ0TyHupg_aDdTolhgkyn95edPQkgje48jDF3F4b6gkHoxTNoZPFxtKy_7aT94ja0Uv184BSDSfhGsOd1QYQQ8fn6KeGay9pIh6TsXd9t7tQMGiXgaypEQadg75acgyY8LmF5eI1q_ure6e0veA_r6UYHzFnlJ-3DnsBuoOUyERAsNOc8xnlUVMkxZ_M7a18_u9OZtILi7kVVJdmMKOO8B4lzwtthSzkrodcYhvBTC4vytpz2ZWxf2Yp7pZx2MKFJRoyxi19dwmGScaU_lNvgv8WfPGdnZ8XKqZEQ1KpYwDXsHmUb0kznFE4JkD1BkE2BkcZrpXv858Ehdq1X2m8NAdG3WueTuvj9UgnUOSzKdnv7_LdZydRyxxb_XfKgBoW3aJN9xwjIfb-YOR-T0DtpeLE1Rsjo4MzoDa7Mi_tK1yuFeX7G6P6EGbwTO0C_2Wd4WvjBTFiGIrKYtmjA=w1516-h1136-no)
 There are 3 people in the above image, person 3 can see both person 2 and person 1, person 2 can see only person 1. And person 1 can see no one!
 
 Now, person 1 is called the **global scope**. It is visible by every function under it. There is also something called as **local scope**. If a function is created, it creates a scope of it's own (just like person 2). It will not be accessible globally or by any other function. 
@@ -39,8 +39,8 @@ console.log("I am global "+ (a+b));
 Now, can anyone guess the output? 😲
 
 Let's take a closer look at the image below.
-
-The blue boundary depicts the **global scope**. The red boundary depicts the **local scope** created by `anExample()`.
+![Execution style by JS](https://lh3.googleusercontent.com/6m5WKZJOIua8_h156nBOR9O2BAE5UjGRUQNJz7XER31ecepmidGAlgfDJiIzbrfxjPjpLGGpnvpi8VncZMRzkPg7TR0RSM7ZR-8beCtPcRO3xA4iEEk1GjIRDh9kHwHMeGenRYDq270NTEnx6lcc4wjrZAXdW45mNecqyA0ne-LeQFhMVFv3OJ9EzUCpC20zUBNXGBPjNmOgV9A1Xe9IZOoC5i5JCa4dJInR2yxayy85M-r_N1hjNfsSR-dgo0_5cZ-S-g0uv74oOwacZMgpKwtGtkEhgdAXj_sVJRYshnVlGaR7ysx1scXhre0X9pTy4RZ5xF4Fzz3dLznGW2pJiApNYBEtUQvtHUvquj-tRqtxc-X1s81ehSj6JUku8QikIiVx6mR-0sCx-9dv2EFgH5MMXwoYBSZB5wm4gb2bxEbtBIefuDi-yxaz-_RN8xSOwS6URJGWr7exjKG8cw-iwkBWwI21l22dKboCRXgJjtQLj-SdWmSUpGhNFE6PtIDGNz9GVVxPtZasXNRQ4ZwZzZXChH6Jk8JQ2IFFRUAJKk_nRwms9geld4w3y-WAgRvJqlOM3pTwNymHqqYfBTnxR8KYSyUDBTSgeBXuyA=w1516-h1136-no)
+The blue boundary depicts the **global scope**. The red boundary depicts the **local scope** created by `anExample()`. And the green arrows are compilation constructs by the JS compiler.
 
 When the function ends, the **local scope** which was created by the respective function is automatically destroyed, therefore all variables that were created in the function no longer exist. 😮
 
