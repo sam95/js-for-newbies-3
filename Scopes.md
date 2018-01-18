@@ -140,5 +140,14 @@ var me = 'bar';
 In simple words, variables declared with `var` remain until the scope is destroyed.
 
 > Food for thought 💡 : Try to print a `var` variable even before declaring it
-### Security is an issue 😔
+### Where are global variables stored? 😐
+Global variables are attached to the `window` object. What's `window` now? 
+
+`window` is the main Javascript root object, it is the root object of your `DOM` (**Document Object Model**).
+ 
+Whenever a web page is loaded, the browser constructs a `DOM` of every page. 
+
+With the help of this `DOM`, javascript is able to create dynamic **HTML**.
+
+### Global variables are cool but Security is an issue 😔
 Just think for a moment, is it not a problem if every function can access a global variable? How do I restrict access for global variables? Okay, now it's time to jump to the next topic **`closures`**
