@@ -180,7 +180,19 @@ function add(x, y) {
 console.log(add(9, 7));
 /* Prints 16 */
 ```
+### Anonymous functions
+What does **anonymous** mean? Google says something with an **unknown name** ☝. The same concept applies even here. A **function** which has no name! Wait, how can it be possible? 🙀 How can something not have a name? 👊 Let's check it out. 🖐
+```javascript
+var x = function (a, b) {
+  return a + b;
+};
+console.log(x(2, 3));
+```
+Now you may ask, Isn't `x` the name of the function? If it isn't, then what is it? I would tell you, that `x` is just a normal global variable. 🤒
 
+It isn't a compulsion for functions to always have a name. If we need to pass parameters to the functions, pass parameters to the variables which bind them. Here in this case, pass parameters to `x`.  😏
+
+---
 Let's get to the interesting part of the discussion 🙄.
 
 Quick question 😶 : How do I share data from one method to another without passing them as parameters? 😮
