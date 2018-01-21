@@ -2,7 +2,7 @@
 
 This is a repository for Session 3 of the **JS for Newbies** series by Javascript Meetup Bangalore.
 
-[Javascript Meetup Bangalore Event](https://www.meetup.com/JavaScript-Meetup-Bangalore/events/246187384/) | [Full Webinar](https://www.youtube.com/watch?v=JXg1GT6zDGQ)
+[Javascript Meetup Bangalore Event](https://www.meetup.com/JavaScript-Meetup-Bangalore/events/246187412/) | [Full Webinar](https://www.youtube.com/watch?v=JXg1GT6zDGQ)
 
 ## 👻 What's already Covered
 
